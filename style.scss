@@ -1,5 +1,86 @@
+@import "reset";
+@import "variables";
+
+@mixin col {
+  padding: 0 10px;
+  float: left;
+  position: relative;
+}
+
+body {
+  font-size: #{$remSize}px;
+}
+
+
+.container {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+.col-12 {
+  @include col();
+  width: 100%;
+}
+
+.col-lg-6 {
+  @include col();
+  @media only screen and (min-width: $lg) {
+    max-width: 50%;
+  }
+}
+
+.row {
+  margin: 0 -15px;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
 .form {
-  color: black;
-  background-color: red;
-  display: flex;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    border: 0;
+    background-color: #FAFAFA;
+  }
+
+  &__textarea {
+    width: 100%;
+    border: 0;
+    background-color: #FAFAFA;
+    min-height: 150px;
+
+    ::placeholder {
+      color: #929292;
+    }
+  }
+
+  &__label {
+    margin-top: 20px;
+    font-size: 17rem/$remSize;
+    display: block;
+    color: #3D3D3D
+  }
+
+  &__submit {
+    display: block;
+    margin-top: 20px;
+    background-color: #5E519D;
+    text-align: center;
+    color: white;
+    width: 140px;
+    font-size: 19rem/$remSize;
+    border-radius: 4px;
+    padding: (21px/2) 0;
+    float: right;
+    @media only screen and (min-width: $lg) {
+      margin: 0 auto;
+      float: none;
+    }
+  }
 }
