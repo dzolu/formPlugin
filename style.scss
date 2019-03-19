@@ -33,9 +33,12 @@ body {
 }
 
 .container {
-  max-width: 600px;
-  display: block;
-  margin: 0 auto;
+
+}
+
+.row {
+  margin: 0 -$gutter;
+  @include clearfix();
 }
 
 .col-12 {
@@ -46,23 +49,26 @@ body {
 .col-lg-6 {
   @include col();
   @media only screen and (min-width: $lg) {
-    max-width: 50%;
+    width: 50%;
   }
 }
 
-.row {
-  margin: 0 -15px;
-
-  @include clearfix();
-}
 
 .form {
+  display: block;
   width: 100%;
+  padding: 0 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  @media only screen and (min-width: $lg) {
+    padding: 0;
+  }
 
   &__input {
     width: 100%;
     border: 0;
     background-color: #FAFAFA;
+    height: 36px;
   }
 
   &__textarea {
@@ -99,10 +105,10 @@ body {
     font-size: 19rem/$remSize;
     border-radius: 4px;
     padding: (21px/2) 0;
-    float: right;
+    margin-left: auto;
+    border: none;
     @media only screen and (min-width: $lg) {
-      margin: 0 auto;
-      float: none;
+      margin-right: auto;
     }
   }
 
