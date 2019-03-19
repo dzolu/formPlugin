@@ -9,7 +9,7 @@
   "author": "Tomasz Koszkul",
   "license": "MIT",
   "dependencies": {
-
+    "jquery": "3.3.1"
   },
   "devDependencies": {
     "grunt": "^1.0.3",
