@@ -1,6 +1,14 @@
 @import "reset";
 @import "variables";
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
 @mixin col {
   padding: 0 10px;
   float: left;
@@ -11,6 +19,18 @@ body {
   font-size: #{$remSize}px;
 }
 
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.clearfix {
+  @include clearfix();
+}
 
 .container {
   max-width: 600px;
@@ -33,11 +53,7 @@ body {
 .row {
   margin: 0 -15px;
 
-  &:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+  @include clearfix();
 }
 
 .form {
@@ -56,15 +72,21 @@ body {
     min-height: 150px;
 
     ::placeholder {
-      color: #929292;
+      color: $grey-92;
     }
   }
 
+  &__char-left {
+    color: $grey-92;
+    margin: 20px 0;
+    font-size: 14rem/$remSize;
+  }
+
   &__label {
-    margin-top: 20px;
-    font-size: 17rem/$remSize;
-    display: block;
-    color: #3D3D3D
+    margin: 20px 0;
+    font-size: 14rem/$remSize;
+    display: inline-block;
+    color: #3D3D3D;
   }
 
   &__submit {
@@ -83,4 +105,5 @@ body {
       float: none;
     }
   }
+
 }
