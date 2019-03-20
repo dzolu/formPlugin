@@ -19,7 +19,6 @@ body {
   font-size: #{$remSize}px;
 }
 
-
 .f-left {
   float: left;
 }
@@ -30,10 +29,6 @@ body {
 
 .clearfix {
   @include clearfix();
-}
-
-.container {
-
 }
 
 .row {
@@ -53,16 +48,18 @@ body {
   }
 }
 
-
-.form {
-  display: block;
-  width: 100%;
+.container{
   padding: 0 10px;
-  max-width: 600px;
-  margin: 0 auto;
   @media only screen and (min-width: $lg) {
     padding: 0;
   }
+}
+.form {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
 
   &__input {
     width: 100%;
