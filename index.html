@@ -6,28 +6,31 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <form class="form row">
-        <div class="col-12 col-lg-6">
-            <label class="form__label" for="name">Name</label>
-            <input class="form__input" id="name" type="text"/>
+<form class="form row">
+    <div class="col-12 col-lg-6">
+        <label class="form__label" for="name">Name</label>
+        <input class="form__input" id="name" type="text"/>
+    </div>
+    <div class="col-12 col-lg-6">
+        <label class="form__label" for="email">Email</label>
+        <input class="form__input" id="email" type="email"/>
+    </div>
+    <div class="col-12">
+        <div class="clearfix">
+            <label class="form__label form__label--message" for="message" class="f-left">Message</label>
+            <p class="form__char-left f-right">
+                <span id="form__char-left__number">60</span> characters left
+            </p>
         </div>
-        <div class="col-12 col-lg-6">
-            <label class="form__label" for="email">Email</label>
-            <input class="form__input" id="email" type="email"/>
-        </div>
-        <div class="col-12">
-            <div class="clearfix">
-                <label class="form__label form__label--message" for="message" class="f-left">Message</label>
-                <p class="form__char-left f-right">
-                    <span id="form__char-left__number">60</span> characters left
-                </p>
-            </div>
-            <textarea id="message" class="form__textarea" type="text" data-max-lenght="60" placeholder="Type your message here"></textarea>
-        </div>
-        <div class="col-12">
-            <button class="form__submit" type="submit">Send</button>
-        </div>
+        <textarea id="message" class="form__textarea" type="text" data-max-lenght="60"
+                  placeholder="Type your message here"></textarea>
+    </div>
+    <div class="col-12">
+        <button class="form__submit" type="submit">Send</button>
+    </div>
+</form>
 
-    </form>
+<script src="node_modules/jQuery/dist/jquery.slim.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
