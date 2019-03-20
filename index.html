@@ -19,10 +19,10 @@
         <div class="clearfix">
             <label class="form__label form__label--message" for="message" class="f-left">Message</label>
             <p class="form__char-left f-right">
-                <span id="form__char-left__number">60</span> characters left
+                <span id="form__char-left__number"></span> characters left
             </p>
         </div>
-        <textarea id="message" class="form__textarea" type="text" data-max-lenght="60"
+        <textarea id="message" class="form__textarea" type="text" data-max-length="5"
                   placeholder="Type your message here"></textarea>
     </div>
     <div class="col-12">
@@ -31,6 +31,7 @@
 </form>
 
 <script src="node_modules/jQuery/dist/jquery.slim.js"></script>
+<script src="limitCharPlugin.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
